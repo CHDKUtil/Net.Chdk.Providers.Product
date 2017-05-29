@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 using System;
 using System.IO;
 
@@ -9,14 +10,22 @@ namespace Net.Chdk.Providers.Product
         #region Constants
 
         private const string DataPath = "Data";
-        private string DataFileName = "products.json";
+        private const string DataFileName = "products.json";
+
+        #endregion
+
+        #region Fields
+
+        private ILogger<ProductProvider> Logger { get; }
 
         #endregion
 
         #region Constructor
 
-        public ProductProvider()
+        public ProductProvider(ILoggerFactory loggerFactory)
         {
+            Logger = loggerFactory.CreateLogger<ProductProvider>();
+
             data = new Lazy<string[]>(GetData);
         }
 
@@ -56,7 +65,9 @@ namespace Net.Chdk.Providers.Product
             using (var reader = File.OpenText(filePath))
             using (var jsonReader = new JsonTextReader(reader))
             {
-                return Serializer.Deserialize<string[]>(jsonReader);
+                var data = Serializer.Deserialize<string[]>(jsonReader);
+                Logger.LogInformation("Products: {0}", JsonConvert.SerializeObject(data));
+                return data;
             }
         }
 
