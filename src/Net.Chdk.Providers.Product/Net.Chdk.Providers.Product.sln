@@ -9,9 +9,18 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Net.Chdk.Shared", "..\..\..
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net.Chdk.Providers.Product.Core", "..\..\..\Net.Chdk.Providers.Product.Core\src\Net.Chdk.Providers.Product.Core\Net.Chdk.Providers.Product.Core.csproj", "{F04AAE35-D712-4BF8-9F20-5AEF39AAF796}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net.Chdk.Providers.Base", "..\..\..\Net.Chdk.Providers.Base\src\Net.Chdk.Providers.Base\Net.Chdk.Providers.Base.csproj", "{3E5DF136-E7C5-4ACA-B065-3E6E36217645}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net.Chdk.Json", "..\..\..\Net.Chdk.Json\src\Net.Chdk.Json\Net.Chdk.Json.csproj", "{BC3C0D74-5A68-4791-BE4B-8B2BC724C0EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net.Chdk.Core", "..\..\..\Net.Chdk.Core\src\Net.Chdk.Core\Net.Chdk.Core.csproj", "{6C183A9C-30C1-47E5-9016-48890EC8ABA2}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\..\..\Net.Chdk.Core\src\Net.Chdk.Shared\Net.Chdk.Shared.projitems*{3e5df136-e7c5-4aca-b065-3e6e36217645}*SharedItemsImports = 4
+		..\..\..\Net.Chdk.Core\src\Net.Chdk.Shared\Net.Chdk.Shared.projitems*{6c183a9c-30c1-47e5-9016-48890ec8aba2}*SharedItemsImports = 4
 		..\..\..\Net.Chdk.Core\src\Net.Chdk.Shared\Net.Chdk.Shared.projitems*{83c6a77c-3286-4f5f-b628-3b971097ad05}*SharedItemsImports = 13
+		..\..\..\Net.Chdk.Core\src\Net.Chdk.Shared\Net.Chdk.Shared.projitems*{bc3c0d74-5a68-4791-be4b-8b2bc724c0ec}*SharedItemsImports = 4
 		..\..\..\Net.Chdk.Core\src\Net.Chdk.Shared\Net.Chdk.Shared.projitems*{d08751cd-5e09-4ad9-8096-4244feec675f}*SharedItemsImports = 4
 		..\..\..\Net.Chdk.Core\src\Net.Chdk.Shared\Net.Chdk.Shared.projitems*{f04aae35-d712-4bf8-9f20-5aef39aaf796}*SharedItemsImports = 4
 	EndGlobalSection
@@ -38,6 +47,30 @@ Global
 		{F04AAE35-D712-4BF8-9F20-5AEF39AAF796}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F04AAE35-D712-4BF8-9F20-5AEF39AAF796}.Release|x64.ActiveCfg = Release|x64
 		{F04AAE35-D712-4BF8-9F20-5AEF39AAF796}.Release|x64.Build.0 = Release|x64
+		{3E5DF136-E7C5-4ACA-B065-3E6E36217645}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E5DF136-E7C5-4ACA-B065-3E6E36217645}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E5DF136-E7C5-4ACA-B065-3E6E36217645}.Debug|x64.ActiveCfg = Debug|x64
+		{3E5DF136-E7C5-4ACA-B065-3E6E36217645}.Debug|x64.Build.0 = Debug|x64
+		{3E5DF136-E7C5-4ACA-B065-3E6E36217645}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E5DF136-E7C5-4ACA-B065-3E6E36217645}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E5DF136-E7C5-4ACA-B065-3E6E36217645}.Release|x64.ActiveCfg = Release|x64
+		{3E5DF136-E7C5-4ACA-B065-3E6E36217645}.Release|x64.Build.0 = Release|x64
+		{BC3C0D74-5A68-4791-BE4B-8B2BC724C0EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC3C0D74-5A68-4791-BE4B-8B2BC724C0EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC3C0D74-5A68-4791-BE4B-8B2BC724C0EC}.Debug|x64.ActiveCfg = Debug|x64
+		{BC3C0D74-5A68-4791-BE4B-8B2BC724C0EC}.Debug|x64.Build.0 = Debug|x64
+		{BC3C0D74-5A68-4791-BE4B-8B2BC724C0EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC3C0D74-5A68-4791-BE4B-8B2BC724C0EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC3C0D74-5A68-4791-BE4B-8B2BC724C0EC}.Release|x64.ActiveCfg = Release|x64
+		{BC3C0D74-5A68-4791-BE4B-8B2BC724C0EC}.Release|x64.Build.0 = Release|x64
+		{6C183A9C-30C1-47E5-9016-48890EC8ABA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C183A9C-30C1-47E5-9016-48890EC8ABA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C183A9C-30C1-47E5-9016-48890EC8ABA2}.Debug|x64.ActiveCfg = Debug|x64
+		{6C183A9C-30C1-47E5-9016-48890EC8ABA2}.Debug|x64.Build.0 = Debug|x64
+		{6C183A9C-30C1-47E5-9016-48890EC8ABA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C183A9C-30C1-47E5-9016-48890EC8ABA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C183A9C-30C1-47E5-9016-48890EC8ABA2}.Release|x64.ActiveCfg = Release|x64
+		{6C183A9C-30C1-47E5-9016-48890EC8ABA2}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
