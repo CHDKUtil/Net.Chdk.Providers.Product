@@ -22,7 +22,7 @@ namespace Net.Chdk.Providers.Product
 
         #region IProductProvider Members
 
-        public string[] GetProducts()
+        public string[] GetProductNames()
         {
             return Data;
         }
