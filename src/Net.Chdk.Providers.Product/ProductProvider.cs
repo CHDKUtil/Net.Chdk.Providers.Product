@@ -1,9 +1,11 @@
 ﻿using Microsoft.Extensions.Logging;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace Net.Chdk.Providers.Product
 {
-    sealed class ProductProvider : DataProvider<string[]>, IProductProvider
+    sealed class ProductProvider : DataProvider<Dictionary<string, string>>, IProductProvider
     {
         #region Constants
 
@@ -24,7 +26,12 @@ namespace Net.Chdk.Providers.Product
 
         public string[] GetProductNames()
         {
-            return Data;
+            return Data.Keys.ToArray();
+        }
+
+        public string GetCategoryName(string productName)
+        {
+            return Data[productName];
         }
 
         #endregion
