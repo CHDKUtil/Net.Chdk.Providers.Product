@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Net.Chdk.Providers.Category;
 
 namespace Net.Chdk.Providers.Product
 {
@@ -7,6 +8,7 @@ namespace Net.Chdk.Providers.Product
         public static IServiceCollection AddProductProvider(this IServiceCollection serviceCollection)
         {
             return serviceCollection
+                .AddSingleton<ICategoryProvider, ProductProvider>()
                 .AddSingleton<IProductProvider, ProductProvider>();
         }
     }
