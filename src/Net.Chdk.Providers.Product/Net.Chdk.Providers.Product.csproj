@@ -3,12 +3,12 @@
   <PropertyGroup>
     <TargetFramework>netstandard1.3</TargetFramework>
     <Description>CHIMP product providers</Description>
-    <AssemblyName>Net.Chdk.Providers.Product</AssemblyName>
     <RootNamespace>Net.Chdk.Providers.Product</RootNamespace>
   </PropertyGroup>
 
   <PropertyGroup>
-    <Version>0.4.0</Version>
+    <Version>0.5.0</Version>
+    <VersionSuffix>alpha</VersionSuffix>
     <Authors>Dmitry Shechtman</Authors>
     <Product>CHIMP</Product>
     <Copyright>Copyright © 2017 Dmitry Shechtman</Copyright>
@@ -17,7 +17,7 @@
   <PropertyGroup>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>Net.Chdk.Providers.Product</Title>
-    <PackageVersion>$(Version)-alpha</PackageVersion>
+    <PackageVersion>$(Version)-$(VersionSuffix)</PackageVersion>
     <PackageIconUrl>https://raw.githubusercontent.com/CHDKUtil/CHIMP/master/tiny.png</PackageIconUrl>
     <PackageLicenseUrl>https://raw.githubusercontent.com/CHDKUtil/Net.Chdk.Providers.Product/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/CHDKUtil/Net.Chdk.Providers.Product</PackageProjectUrl>
@@ -25,23 +25,16 @@
     <PackageTags>chimp provider product</PackageTags>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
-    <TreatSpecificWarningsAsErrors />
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+  <PropertyGroup>
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
     <TreatSpecificWarningsAsErrors />
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="microsoft.extensions.dependencyinjection.abstractions" Version="1.1.1" />
-    <PackageReference Include="microsoft.extensions.logging.abstractions" Version="1.1.2" />
     <PackageReference Include="Net.Chdk.Core" Version="0.3.0-alpha" />
-    <PackageReference Include="Net.Chdk.Providers.Base" Version="0.2.0-alpha" />
-    <PackageReference Include="Net.Chdk.Providers.Category.Core" Version="0.1.0-alpha" />
-    <PackageReference Include="Net.Chdk.Providers.Product.Core" Version="0.1.0-alpha" />
+    <PackageReference Include="Net.Chdk.Providers.Base" Version="0.2.1-alpha" />
+    <PackageReference Include="Net.Chdk.Providers.Product.Core" Version="0.2.0-alpha" />
   </ItemGroup>
   
 </Project>
